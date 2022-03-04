@@ -11,7 +11,6 @@
 <script>
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
-  xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
   var username="developer";
   var password="C1sco12345";
   xhttp.onreadystatechange = function() {
@@ -22,6 +21,7 @@ function loadDoc() {
   xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://sandbox-iosxe-latest-1.cisco.com:443/restconf/data/ietf-interfaces:interfaces", false);
   xhttp.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
   xhttp.setRequestHeader("Accept", "application/yang-data+json");
+  xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
   xhttp.send();
 }
 </script>
