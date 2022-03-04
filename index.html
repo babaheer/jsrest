@@ -21,10 +21,7 @@ function loadDoc() {
   xhttp.open("GET", "https://sandbox-iosxe-latest-1.cisco.com:443/restconf/data/ietf-interfaces:interfaces", true);
   xhttp.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
   xhttp.setRequestHeader("Accept", "application/yang-data+json");
-  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-  xhttp.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  xhttp.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type');
-  xhttp.setRequestHeader('Access-Control-Allow-Credentials', false);
+  xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
   xhttp.send();
 }
 </script>
