@@ -15,7 +15,7 @@ function loadDoc() {
   var password="C1sco12345";
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = JSON.parse(this.responseText);
+      document.getElementById("demo").innerHTML = this.response;
     }
   };
   xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://sandbox-iosxe-latest-1.cisco.com:443/restconf/data/ietf-interfaces:interfaces", false);
